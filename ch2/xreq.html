@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户输入</title>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="xhr.js"></script>
+</head>
+<body>
+    <form id="input" name="input" method="POST">
+        <table width="663" height="226" border="1">
+            <tr>
+                <td colspan="2"><div align="center">请输入相关数据：</div></td>
+            </tr>
+            <tr>
+                <td width="132">圆 (circle) </td>
+                <td width="521">
+                    半径:
+                    <input type="text" name="r" id="r">
+                </td>
+            </tr>
+            <tr>
+                <td>梯形 (ladder) </td>
+                <td>
+                    <p>
+                        上底:
+                        <input type="text" name="a" id="a">
+                    </p>
+                    <p>
+                        下底:
+                        <input type="text" name="b" id="b">
+                    </p>
+                    <p>
+                        高:
+                        <input type="text" name="h" id="h">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="submit" type="subit" name="submit" value="提交">
+                </td>
+                <td>
+                    <input type="reset" name="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="return">
+    </div>
+</body>
+</html>
