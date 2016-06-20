@@ -12,14 +12,13 @@ $("#submit").on('click', function() {
   console.log(params);
 
   var response_handle = function (data, status) {
-     var circle = data.circle;
-     var ladder = data.ladder;
-     var result = $("#result");
-     result.append(
-      $("<p>").html('圆的面积是' + circle),
-      $("<p>").html('梯形的面积是' + ladder)
-      )
+    var circle = data.circle;
+    var ladder = data.ladder;
+    var result = $("#return");
+    result.text("");
+    result.append("<p>圆的面积是：" + circle + "</p>");
+    result.append("<p>梯形的面积是：" + ladder + "</p>");
   }
 
-  $.post('result.php', params, response_handle);
+  $.post('result.php', params, response_handle, 'json');
 });

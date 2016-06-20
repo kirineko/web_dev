@@ -18,14 +18,18 @@ function getArea2($a, $b, $h)
 
 function isAjax()
 {
-    return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'XMLHttpRequest';
+    if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
+        return ($_SERVER['HTTP_X_REQUESTED_WITH']) == 'XMLHttpRequest';
+    } else {
+        return false;
+    }
 }
 
 $circle = round(getArea1($r), 2);
 $ladder = getArea2($a,$b,$h);
 
 if (isAjax()) {
-    return json_encode([
+    echo json_encode([
         'circle' => $circle,
         'ladder' => $ladder,
     ]);
