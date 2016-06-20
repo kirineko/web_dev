@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户输入</title>
+</head>
+<body>
+    <form id="input" name="input" method="POST" action="result.php">
+        <table width="663" height="226" border="1">
+            <tr>
+                <td colspan="2"><div align="center">请输入相关数据：</div></td>
+            </tr>
+            <tr>
+                <td width="132">圆 (circle) </td>
+                <td width="521">
+                    半径:
+                    <input type="text" name="r">
+                </td>
+            </tr>
+            <tr>
+                <td>梯形 (ladder) </td>
+                <td>
+                    <p>
+                        上底:
+                        <input type="text" name="a">
+                    </p>
+                    <p>
+                        下底:
+                        <input type="text" name="b">
+                    </p>
+                    <p>
+                        高:
+                        <input type="text" name="h">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" value="提交">
+                </td>
+                <td>
+                    <input type="reset" name="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
